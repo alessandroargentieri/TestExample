@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by alessandro.argentier on 22/09/2016.
  */
-public class Model {
+public class Model implements ModelInterface{
 
     //costruttore
     public Model(){

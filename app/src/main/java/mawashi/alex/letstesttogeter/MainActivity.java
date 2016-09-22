@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Presenter mPresenter;
+    PresenterInterface mPresenter;
     EditText mEdit;
     TextView mText;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         mEdit = (EditText)findViewById(R.id.edit);
         mText = (TextView)findViewById(R.id.text);
 
-        //inizializzo il Presenter
+        //inizializzo il Presenter a partire dalla sua interfaccia
         mPresenter = new Presenter();
 
     }
@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
     //pulsante GET
     public void Get(View v){
         mText.setText(mPresenter.getString());
+    }
+
+    //pulsante 2+5 TEST
+    public void LittleTest(View v){
+        // i numeri sono presi da variabili statiche globali a tutta l'applicazione
+        // non viene passata la TextView al presenter affichè sia riempita, ma è il Presenter a restituire il risultato alla TextView
+        ApplicationClass ac = new ApplicationClass();
+        mText.setText(mPresenter.sum(ac.getNumber(1),ac.getNumber(2)));
     }
 
 }

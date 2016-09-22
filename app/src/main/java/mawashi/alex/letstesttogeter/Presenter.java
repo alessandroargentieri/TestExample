@@ -8,7 +8,7 @@ import java.io.File;
 /**
  * Created by alessandro.argentier on 22/09/2016.
  */
-public class Presenter {
+public class Presenter implements PresenterInterface{
 
     //costruttore
     public Presenter(){
@@ -17,7 +17,7 @@ public class Presenter {
 
     public String getString(){
         String result = "";
-        Model mModel = new Model();
+        ModelInterface mModel = new Model();
         try{
             result = mModel.getData("/sdcard/TESTEXAMPLE/SavedData.txt");
         }catch(Exception e){
@@ -28,10 +28,16 @@ public class Presenter {
 
 
 
-
     public void saveString(String stringa){
-        Model mModel = new Model();
+        ModelInterface mModel = new Model();
         mModel.saveData(stringa);
+    }
+
+    public String sum(int a, int b){
+        int c = a + b;
+        String result = c + "";
+
+        return result;
     }
 
 }
