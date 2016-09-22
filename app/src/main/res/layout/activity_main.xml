@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding ="@dimen/activity_vertical_margin"
+    android:background="#4499AABB"
+    android:orientation="vertical"
+    tools:context="mawashi.alex.letstesttogeter.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test example"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edit"
+        android:hint="Write text here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:layout_marginTop="30dp"
+        android:onClick="Save"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GET"
+        android:layout_marginTop="30dp"
+        android:onClick="Get"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="No text saved" />
+
+
+</LinearLayout>
