@@ -1,5 +1,6 @@
 package mawashi.alex.letstesttogeter;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
         // non viene passata la TextView al presenter affichè sia riempita, ma è il Presenter a restituire il risultato alla TextView
         ApplicationClass ac = new ApplicationClass();
         mText.setText(mPresenter.sum(ac.getNumber(1),ac.getNumber(2)));
+    }
+
+    //pulsante PASS TO SECOND ACTIVITY
+    public void PassSecondActivity(View v){
+        String message = mText.getText().toString();
+
+        Intent intent = new Intent(this, MainActivity2.class);
+        Bundle b = new Bundle();
+        b.putString("parametro", message);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 
 }

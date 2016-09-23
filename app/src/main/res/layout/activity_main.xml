@@ -53,4 +53,11 @@
         android:layout_marginTop="30dp"
         android:onClick="LittleTest"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PASS TO SECOND ACTIVITY"
+        android:layout_marginTop="30dp"
+        android:onClick="PassSecondActivity"/>
+
 </LinearLayout>

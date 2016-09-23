@@ -6,10 +6,12 @@ android {
 
     defaultConfig {
         applicationId "mawashi.alex.letstesttogeter"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        //added for instrumentation test
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -25,4 +27,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     // Optional -- Mockito framework
     testCompile 'org.mockito:mockito-core:1.10.19'
+    //added dependencies for instrumentation test
+    androidTestCompile 'com.android.support.test:runner:0.2'
+    androidTestCompile 'com.android.support.test:rules:0.2'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestCompile 'com.android.support:support-annotations:24.2.1'
+
+    // Set this dependency if you want to use Hamcrest matching
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
+
+
 }
